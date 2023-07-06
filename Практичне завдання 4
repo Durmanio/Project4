@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Enter a natural number n (1 < n < 150): ";
+    // Введіть натуральне число n
+    std::cin >> n;
+
+    int count = 0;
+    for (int m = 1; m <= n; m++) {
+        if (n % m == n / m) {
+            // Перевірка чи m є рівним дільником числа n
+            count++;
+        }
+    }
+
+    std::cout << "The number of equal divisors of n: " << count << std::endl;
+    // Кількість рівних дільників числа n:
+
+    return 0;
+}
